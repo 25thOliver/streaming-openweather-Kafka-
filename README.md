@@ -322,7 +322,7 @@ docker exec -it mongodb mongo --eval "db.adminCommand('ismaster')"
 5. Open a Pull Request
 
 
-## 🔗 Resources
+## Resources
 
 - [OpenWeather API Documentation](https://openweathermap.org/api)
 - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
