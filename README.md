@@ -57,3 +57,13 @@ We enforce data consistency at two levels:
    - Rejects invalid documents even if consumer fails to validate.
 
 This guarantees strong data integrity from Kafka → MongoDB.
+
+## Unit Tests (Step 5)
+
+- Framework: pytest
+- Location: `test_weather_record.py`
+- Tests:
+  - Valid record parses successfully
+  - Missing `city` → validation error
+  - Negative timestamp → validation error
+  - Non-dict payload → validation error
