@@ -249,7 +249,7 @@ pytest tests/test_consumer.py -v  # Test consumer validation
 ![Test Results](images/test_result.png)
 *Comprehensive test coverage for data validation and pipeline components*
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 stream_openweather/
