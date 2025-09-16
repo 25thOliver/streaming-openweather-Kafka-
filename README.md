@@ -43,3 +43,17 @@
 - Script: `openweather_consumer.py`
   - Subscribes to topic `openweather.raw`
   - Writes JSON messages into MongoDB collection `weather_data`
+
+## Step 4 — Validation
+
+We enforce data consistency at two levels:
+
+1. **Python (Pydantic in consumer)**  
+   - Validates fields: `city (str)`, `timestamp (int)`, `payload (dict)`.  
+   - Skips invalid records and logs errors.
+
+2. **MongoDB JSON Schema**  
+   - Ensures every document has `city`, `timestamp`, and `payload.main/weather`.  
+   - Rejects invalid documents even if consumer fails to validate.
+
+This guarantees strong data integrity from Kafka → MongoDB.
