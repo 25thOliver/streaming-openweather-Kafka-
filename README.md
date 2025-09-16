@@ -2,7 +2,7 @@
 
 A real-time data streaming pipeline that fetches weather data for **all African capital cities** from the OpenWeather API, streams it via **Apache Kafka**, validates with **Pydantic**, and stores in **MongoDB**.
 
-![Pipeline Architecture](images/pipeline_architecture.svg)
+![Pipeline Architecture](images/pipeline_architecture.png)
 *Pipeline flow: OpenWeather API → Kafka Producer → Kafka Topic → Consumer → MongoDB*
 
 ## Features
