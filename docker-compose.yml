@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   zookeeper:
     image: bitnami/zookeeper:3
@@ -19,3 +20,13 @@ services:
       - "9092:9092"
     depends_on:
       - zookeeper
+
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
