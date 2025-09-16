@@ -31,3 +31,15 @@
 - Script: `openweather_producer.py`
   - Polls OpenWeather API every 30s
   - Produces JSON messages into `openweather.raw`
+
+## Step 3 — Consumer
+
+- Language: Python
+- Libraries: kafka-python, pymongo
+- Config in `.env`:
+  - `MONGO_URI`
+  - `MONGO_DB`
+  - `MONGO_COLLECTION`
+- Script: `openweather_consumer.py`
+  - Subscribes to topic `openweather.raw`
+  - Writes JSON messages into MongoDB collection `weather_data`
