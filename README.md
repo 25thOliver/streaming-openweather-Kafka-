@@ -19,3 +19,15 @@
 - Step 3: build consumer that parses and stores to a document DB (MongoDB/Elasticsearch) and creates meaningful schema
 - Step 4: add schema/validation + monitoring + CI
 
+## Step 2 — Producer
+
+- Language: Python
+- Libraries: kafka-python, requests, python-dotenv
+- Config in `.env`:
+  - `OPENWEATHER_API_KEY`
+  - `OPENWEATHER_CITY`
+  - `KAFKA_BOOTSTRAP_SERVERS`
+  - `KAFKA_TOPIC`
+- Script: `openweather_producer.py`
+  - Polls OpenWeather API every 30s
+  - Produces JSON messages into `openweather.raw`
